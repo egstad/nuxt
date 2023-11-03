@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  css: ["~/assets/styles/reset.css", "~/assets/styles/theme.css"],
-  modules: ["@nuxtjs/plausible", "@pinia/nuxt"],
+  css: ["~/assets/styles/theme.scss", "~/assets/styles/reset.css"],
+  modules: ["@pinia/nuxt"],
   plugins: [
     { src: "~/plugins/device/deviceInfo.ts", mode: "client" },
     { src: "~/plugins/device/deviceDimensions.ts", mode: "client" },

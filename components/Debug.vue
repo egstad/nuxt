@@ -43,9 +43,21 @@ const deviceProperties = computed(() => {
 
 <style scoped>
 button {
+  font-size: inherit;
   appearance: none;
   background-color: transparent;
+  display: block;
+  padding: 0.25em 0.5em;
+  color: var(--color-foreground);
+  text-decoration: none;
+  border-radius: 100vw;
+  cursor: pointer;
   border: 0;
+
+  position: fixed;
+  top: calc(var(--unit-small) + var(--unit-smaller));
+  right: var(--unit-big);
+  z-index: 999;
 }
 
 table {
@@ -54,8 +66,8 @@ table {
   border: 2px solid var(--background-color);
   position: fixed;
   z-index: 999;
-  top: 1rem;
-  right: 1rem;
+  top: var(--unit-huge);
+  right: var(--unit-big);
 }
 
 tr {
@@ -67,7 +79,7 @@ td {
 }
 
 td:first-child {
-  background: gray;
+  background: var(--color-background-light);
 }
 
 td:last-child {
@@ -80,5 +92,11 @@ td.is-false {
 
 td.is-true {
   background: green;
+}
+
+@media (prefers-color-scheme: light) {
+  td {
+    color: var(--color-background);
+  }
 }
 </style>

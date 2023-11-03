@@ -1,20 +1,13 @@
 <template>
   <div>
-    <p>Lets see if sanity is working for us or not...</p>
-    <WorkList />
+    <p class="placeholder-hero">Index</p>
   </div>
 </template>
 
 <script setup>
-import { onMounted } from "vue";
 import pageTransitionDefault from "~/assets/scripts/pages/transitionDefault";
 
-const nuxtApp = useNuxtApp();
 definePageMeta({
   pageTransition: pageTransitionDefault(),
-});
-
-onMounted(() => {
-  nextTick(() => nuxtApp.$dimensions.set());
 });
 </script>

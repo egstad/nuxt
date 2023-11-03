@@ -1,6 +1,5 @@
 <template>
   <header class="site-header">
-    <HeaderLogo />
     <HeaderNav />
     <Debug v-if="isDev" />
   </header>

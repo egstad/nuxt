@@ -1,4 +1,5 @@
 import gsap from "gsap";
+import { useAppStore } from "~/stores/app";
 
 export default function pageTransitionDefault() {
   // view all available vue hooks here:
@@ -15,6 +16,8 @@ export default function pageTransitionDefault() {
       });
     },
     onEnter: (el, done) => {
+      const app = useAppStore();
+
       gsap.to(el, {
         ease: "expo.out",
         duration: 1,
@@ -22,7 +25,10 @@ export default function pageTransitionDefault() {
         opacity: 1,
         y: 0,
         rotate: 0,
-        onComplete: done,
+        onComplete: () => {
+          app.setRouteIsTransitioning(false);
+          done();
+        },
       });
     },
     onLeave(el, done) {
@@ -34,6 +40,5 @@ export default function pageTransitionDefault() {
         onComplete: done,
       });
     },
-    onAfterEnter: (el) => {},
   };
 }
