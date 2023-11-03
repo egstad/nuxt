@@ -1,0 +1,27 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "latest",
+    "@nuxtjs/plausible": "^0.2.3",
+    "nuxt": "^3.8.0",
+    "sass": "^1.69.5",
+    "vue": "^3.3.7",
+    "vue-router": "^4.2.5"
+  },
+  "dependencies": {
+    "@egstad/detect-scroll": "^1.0.11",
+    "@pinia/nuxt": "^0.5.1",
+    "@sanity/client": "^6.7.0",
+    "gsap": "^3.12.2",
+    "pinia": "^2.1.7"
+  }
+}

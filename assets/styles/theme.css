@@ -1,0 +1,31 @@
+/* Define default variables for light theme */
+:root {
+  --background-color: #ffffff;
+  --text-color: #333333;
+  --link-color: #1a0dab;
+  --border-color: #ddd;
+}
+
+/* Override variables for dark theme */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #111;
+    --text-color: #ffffff;
+    --link-color: #8ab4f8;
+    --border-color: #444;
+  }
+}
+
+/* Use the variables for styling */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+a {
+  color: var(--link-color);
+}
+
+hr {
+  border-color: var(--border-color);
+}
