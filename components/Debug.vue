@@ -25,7 +25,7 @@
 import { computed, ref } from "vue";
 import { useDeviceStore } from "~/stores/device";
 
-const debugActive = ref(true);
+const debugActive = ref(false);
 const deviceStore = useDeviceStore();
 
 // Maps the device state to an array of [key, value] pairs,
