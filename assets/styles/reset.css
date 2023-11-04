@@ -148,6 +148,7 @@ table {
 html,
 body,
 #__nuxt {
+  font-family: "abcdiatype";
   min-height: 100dvh;
   margin: 0;
 }

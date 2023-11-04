@@ -17,6 +17,9 @@
 
 <script setup>
 import pageTransitionDefault from "~/assets/scripts/pages/transitionDefault";
+import pageSEO from "~/assets/scripts/pages/seo";
+
+useSeoMeta(pageSEO({ title: "Contact" }));
 
 definePageMeta({
   pageTransition: pageTransitionDefault(),

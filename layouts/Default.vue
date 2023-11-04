@@ -43,7 +43,7 @@ watch(
   font-size: var(--base-font-size);
   max-width: 30ch;
   letter-spacing: calc(0.1em - var(--base-font-size) * var(--scale-factor));
-  line-height: 1;
+  line-height: 1.1;
   transform: translateX(-0.03em);
 }
 </style>
